@@ -44,7 +44,7 @@ export default class extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        if (this.props.children != nextProps.children || this.redrawing) {
+        if (this.props != nextProps || this.redrawing) {
             return true;
         }
         return false;
